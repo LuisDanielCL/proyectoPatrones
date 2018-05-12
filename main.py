@@ -8,15 +8,17 @@ import cv2
 
 import ReconocerPlaca
 
-mostrarPasos = False
+mostrarPasos = True
 
 
 def main():
-    imgOriginalScene  = cv2.imread("1.png")            
+    img  = cv2.imread("15.png")            
 
-    if imgOriginalScene is None:                          
+    if img is None:                          
         print ("\nError: imagen no fue leida\n\n")                             
-        return                                              
+        return           
+    
+    ReconocerPlaca.detectarPlacas(img)
 
 
 if __name__ == "__main__":

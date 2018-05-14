@@ -8,11 +8,14 @@ import cv2
 
 import ReconocerPlaca
 
+SCALAR_WHITE = (255.0, 255.0, 255.0)
+
+
 mostrarPasos = True
 
 
 def main():
-    img  = cv2.imread("15.png")            
+    img  = cv2.imread("carro2.jpg")            
 
     if img is None:                          
         print ("\nError: imagen no fue leida\n\n")                             

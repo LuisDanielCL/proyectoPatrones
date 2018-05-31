@@ -24,7 +24,7 @@ def grisYbinario(img):
     imgFiltro = np.zeros((height, width, 1), np.uint8)
     imgFiltro = cv2.GaussianBlur(imgGrayContrast, FILTRO_GAUSSIANO_TAMANO, 0)
     #se usa el adaptativo porque facilita cuando existen variaciones de luz
-    imgThresh = cv2.adaptiveThreshold(imgFiltro, 255.0, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
+    imgThresh = cv2.adaptiveThreshold(imgFiltro, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
                                       cv2.THRESH_BINARY_INV,BINARIZACION_TAMANO, BINARIZACION_PESO)
 
     return imgGray, imgThresh
